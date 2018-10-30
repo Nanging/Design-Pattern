@@ -16,6 +16,7 @@ public class Raw implements PlantState{
 	@Override
 	public void showState() {
 		// TODO Auto-generated method stub
+		System.out.println("Raw");
 		
 	}
 //	static public PlumuleState getInstance() {

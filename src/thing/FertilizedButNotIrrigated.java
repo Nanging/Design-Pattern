@@ -16,7 +16,7 @@ public class FertilizedButNotIrrigated implements PlantState{
 	@Override
 	public void showState() {
 		// TODO Auto-generated method stub
-
+		System.out.println("Fertilized But Not Irrigated"); 
 	}
 
 	@Override

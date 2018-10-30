@@ -6,7 +6,12 @@ public class Product {
 	private int number;
 	private int price;
 	
+	public Product(ProductType ptype,int num) {
+		type=ptype.getID();
+		number=1;
+	}
 	public Product() {
+		
 	}
 	
 	public int getType() {

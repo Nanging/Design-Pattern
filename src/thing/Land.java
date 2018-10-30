@@ -3,7 +3,7 @@ package thing;
 import plant.Plant;
 
 public class Land {
-	 private Plant plant = null;
+	private Plant plant = null;
 	private int landID;
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
@@ -13,7 +13,6 @@ public class Land {
 		return landID;
 	}
 	public Land(int landID) {
-		// TODO Auto-generated constructor stub
 		this.landID = landID;
 	}
 	public void sow(Plant plant) {

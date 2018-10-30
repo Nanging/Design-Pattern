@@ -5,7 +5,9 @@ import thing.Product;
 
 public abstract class Plant {
 	protected PlantState growState;
-	
+	public void showPlantState() {
+		growState.showState();
+	}
 	public void fertilized() {
 		// TODO Auto-generated method stub
 		growState.fertilized(this);
@@ -16,12 +18,9 @@ public abstract class Plant {
 		growState.irrigated(this);
 	}
 
-	public boolean harvest() {
-		return harvest(growState);
-	}
-	
-	public abstract boolean harvest(PlantState state);
-	public abstract Product getResult();
+
+	public abstract void getProduct();
+	public abstract boolean harvest();
 	public void changeState(PlantState state) {
 		growState = state;
 	}
