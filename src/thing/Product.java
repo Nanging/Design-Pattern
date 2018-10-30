@@ -1,12 +1,24 @@
 package thing;
+import java.util.Hashtable;
 
 public class Product {
 	
 	private int type;
 	private int number;
 	private int price;
+	private String productName;
+	private static Hashtable<Integer,String > shapeMap = new Hashtable<Integer, String>();
 	
 	public Product() {
+		shapeMap.put(1,"Egg");
+		shapeMap.put(2,"Chicken");
+		shapeMap.put(3,"Milk");
+		shapeMap.put(4,"Corn");
+	}
+	
+	public String getName(int catalog) {
+		String name=shapeMap.get(catalog);
+		return name;
 	}
 	
 	public int getType() {
@@ -15,6 +27,7 @@ public class Product {
 	
 	public int setType(int type) {
 		this.type=type;
+		this.productName=getName(type);
 		return this.type;
 	}
 	
@@ -34,5 +47,11 @@ public class Product {
 		this.price=price;
 		return this.price;
 	}
+	
+	
+	public String getProductName() {
+		return this.productName;
+	}
+	
 	
 }

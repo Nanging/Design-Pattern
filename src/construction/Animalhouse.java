@@ -1,5 +1,6 @@
 package construction;
 
+
 public class Animalhouse implements BuildingAction {
 	
 	
