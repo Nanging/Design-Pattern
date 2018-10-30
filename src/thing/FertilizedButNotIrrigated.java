@@ -22,7 +22,7 @@ public class FertilizedButNotIrrigated implements PlantState{
 	@Override
 	public void fertilized(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("它不需要施肥");
+		System.out.println("no need for fertilization");
 //		plant.changeState(FertilizedButNotIrrigated.getInstance());
 	}
 
@@ -34,7 +34,7 @@ public class FertilizedButNotIrrigated implements PlantState{
 	@Override
 	public boolean harvest(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("还不能收获");
+		System.out.println("cannot harvest yet");
 		return false;
 	}
 
