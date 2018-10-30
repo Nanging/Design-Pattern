@@ -28,8 +28,19 @@ public class FieldContainer {
 		}
 		return instance;
 	}
+	/**
+	 * 
+	 * @return list of cultivatedLands
+	 */
 	public ArrayList<Land> getLands(){
 		return cultivatedLands;
+	}
+	/**
+	 * 
+	 * @return list of uncoltivatedLands
+	 */
+	public ArrayList<Land> getEmptyLands(){
+		return uncultivatedLands;
 	}
 	/**
 	 *  开垦一块土地

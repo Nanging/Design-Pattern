@@ -1,45 +1,50 @@
 package construction;
 
+
 import java.util.ArrayList;
 
-public class LivestockFarm {
+import livestock.Livestock;
 
-	private static LivestockFarm instance = null;
-	
-
-	private ArrayList<BuildingAction> LivsetockFarmPig;
-	private ArrayList<BuildingAction> LivsetockFarmCow;
-	private ArrayList<BuildingAction> LivsetockFarmOx;
-	private ArrayList<BuildingAction> LivsetockFarmChook;
-	private ArrayList<BuildingAction> LivsetockFarmSheep;
-	LivestockFarm() {
-		
-		LivsetockFarmPig = new ArrayList<>();
-		LivsetockFarmCow = new ArrayList<>();
-		LivsetockFarmOx = new ArrayList<>();
-		LivsetockFarmChook = new ArrayList<>();
-		LivsetockFarmSheep = new ArrayList<>();
-		
+public class LivestockFarm implements BuildingAction{
+	private ArrayList<Livestock> livestocks = new ArrayList<>();
+	private String name;
+	public LivestockFarm(String name) {
+		// TODO Auto-generated constructor stub
+		this.name = name;
 	}
-	public static LivestockFarm getInstance() {
-		if (instance==null) {
-			instance = new LivestockFarm();
+	public void addLivestock(Livestock newLivestock) {
+		livestocks.add(newLivestock);
+	}
+	class Iterator{
+		public boolean hasNext() {
+			return livestocks.iterator().hasNext();
 		}
-		return instance;
+		public Livestock next() {
+			return livestocks.iterator().next();
+		}
 	}
-	public ArrayList getLivsetockFarmPig() {
-		return LivsetockFarmPig;
+	public Livestock getLivestock(int id) {
+		Livestock ls = null;
+		for (Livestock livestock : livestocks) {
+			if (ls.getId() == id) {
+				ls = livestock;
+			}
+		}
+		return ls;
 	}
-	public ArrayList getLivsetockFarmCow() {
-		return LivsetockFarmCow;
+	@Override
+	public void build() {
+		// TODO Auto-generated method stub
+		
 	}
-	public ArrayList getLivsetockFarmOx() {
-		return LivsetockFarmOx;
+	@Override
+	public void repair() {
+		// TODO Auto-generated method stub
+		
 	}
-	public ArrayList getLivsetockFarmChook() {
-		return LivsetockFarmChook;
-	}
-	public ArrayList getLivsetockFarmSheep() {
-		return LivsetockFarmSheep;
+	@Override
+	public void destory() {
+		// TODO Auto-generated method stub
+		
 	}
 }

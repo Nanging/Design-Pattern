@@ -2,12 +2,13 @@ package worker;
 
 import thing.FieldContainer;
 
-public class FarmMaster {
-	private FarmMaster() {}
-	private static FarmMaster instance = new FarmMaster();
-	public static FarmMaster getInstance() {
+public class Manager {
+	private Manager() {}
+	private static Manager instance = new Manager();
+	public static Manager getInstance() {
 		return instance;
 	}
+	
 	//命令工人去做
 	public void call(Command command) {
 		WorkerList workerlist = new WorkerList();
@@ -28,21 +29,5 @@ public class FarmMaster {
 	//收获
 	public void harvest(int landID) {
 		FieldContainer.getInstance().harvest(landID);
-	}
-	
-	public void callManager(Command command) {
-		Manager.getInstance().call(command);
-	}
-
-	public void doFertilizeByManager(int landID) {
-		Manager.getInstance().fertilize(landID);
-	}
-
-	public void doIrrigateByManager(int landID) {
-		Manager.getInstance().irrigate(landID);
-	}
-
-	public void doHarvestByManager(int landID) {
-		Manager.getInstance().harvest(landID);
 	}
 }

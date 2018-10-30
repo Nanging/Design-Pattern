@@ -1,10 +1,13 @@
 package construction;
 import buy.ResList;
 import thing.*;
+import worker.Seller;
 
 
 public class Factory implements BuildingAction {
+
 	private Seller seller;
+
 	public Factory() {
 		GoodsCache.loadCache();
 		seller = new Seller();
@@ -44,16 +47,12 @@ public class Factory implements BuildingAction {
 		clonedGoods.setNumber(product.getNumber());
 		clonedGoods.setPrice(product.getPrice()*2);
 		return clonedGoods;
-//		System.out.println(clonedGoods.getGoodsType());
-//		System.out.println(clonedGoods.getNumber());
 	}
-	
-	public int dealAndSell(Product product) {
-		Goods clonedGoods = (Goods)GoodsCache.getShape(product.getType());
+	public void dealAndSell(Product product) {
+		Goods clonedGoods=(Goods)GoodsCache.getShape(product.getType());
 		clonedGoods.setNumber(product.getNumber());
 		clonedGoods.setPrice(product.getPrice()*2);
-		return seller.sellGoods(clonedGoods);
-		
+		seller.sell(clonedGoods);
 	}
 	
 }

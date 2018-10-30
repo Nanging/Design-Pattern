@@ -1,9 +1,10 @@
-package thing;
+package worker;
 
 import construction.Sale;
+import thing.Goods;
 
 public class Seller {
-	public void sellGoods(Goods goods) {
+	public void sell(Goods goods) {
 		Sale.sale(goods);
 	}
 }

@@ -1,5 +1,6 @@
 package construction;
 
+import buy.ResList;
 import thing.Goods;
 import thing.Product;
 
@@ -9,7 +10,7 @@ public abstract class Store {
 	 
 	protected int level;
 	 
-	//责任链中的下一个元素
+	//璐ｄ换閾句腑鐨勪笅涓�涓厓绱�
 	protected Store nextStore;
 	 
 	public void setNextStore(Store nextStore){
@@ -25,21 +26,21 @@ public abstract class Store {
 //	   }
 //	}
 	
-	public int storeMessage(Product forsale){
+	public void storeMessage(Product forsale){
 		if(this.level >= forsale.getType()){
-		   return sale(forsale);
+			ResList.Instance().money += sale(forsale);
 		} 
 		else {
-		  return nextStore.storeMessage(forsale);
+			nextStore.storeMessage(forsale);
 		}
 	}
 	
-	public int storeMessage(Goods forsale){
+	public void storeMessage(Goods forsale){
 		if(this.level >= forsale.getId()){
-		   return sale(forsale);
-		}
-		else{
-		   return nextStore.storeMessage(forsale);
+			ResList.Instance().money += sale(forsale);
+		} 
+		else {
+			nextStore.storeMessage(forsale);
 		}
 	}
 	 
