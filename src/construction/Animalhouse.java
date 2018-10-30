@@ -1,22 +1,45 @@
 package construction;
 
+import java.util.ArrayList;
+import construction.LivestockFarm;
 
 public class Animalhouse implements BuildingAction {
 	
 	
-	public void build() {
+	private LivestockFarm livsetockFarms;
+	
+
+	public Animalhouse() {
+		livsetockFarms = new LivestockFarm();
+	}
+	
+
+	public LivestockFarm buildLivestockFarm() {
+		
 		System.out.println("The animalhouse have been built!");
+		return livsetockFarms;
 	}
-	
-	public void repair() {
-		System.out.println("The animalhouse is being repaired!");
-	}
-	
-	public void destory() {
-		System.out.println("The animalhouse have been destoryed!");
-	}
-	
-	public void live() {
+
+
+	@Override
+	public void build() {
+		// TODO Auto-generated method stub
 		
 	}
+
+
+	@Override
+	public void repair() {
+		// TODO Auto-generated method stub
+		
+	}
+
+
+	@Override
+	public void destory() {
+		// TODO Auto-generated method stub
+		
+	}
+
+	
 }
