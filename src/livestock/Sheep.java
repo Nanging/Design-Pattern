@@ -10,15 +10,15 @@ public class Sheep extends Livestock {
 	public boolean getWool() {
 		if(nowstate.getState()==1)
 		{
-			System.out.println("¸îÑòÃ«³É¹¦");
-			//»ñµÃÑòÃ«
+			System.out.println("ï¿½ï¿½ï¿½ï¿½Ã«ï¿½É¹ï¿½");
+			//ï¿½ï¿½ï¿½ï¿½ï¿½Ã«
 			
 			nowstate.setFeedTime();
 			nowstate.setDrinkTime();
 			return true;
 		}
 		else {
-			System.out.println("»¹²»ÄÜ¸îÑòÃ«");
+			System.out.println("ï¿½ï¿½ï¿½ï¿½ï¿½Ü¸ï¿½ï¿½ï¿½Ã«");
 			return false;
 		}
 	}
