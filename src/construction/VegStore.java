@@ -1,5 +1,8 @@
 package construction;
 
+import com.sun.javafx.property.adapter.ReadOnlyPropertyDescriptor.ReadOnlyListener;
+import buy.*;
+
 import thing.Goods;
 import thing.Product;
 
@@ -9,12 +12,16 @@ public class VegStore extends Store{
 	}
 	
 	protected int sale(Product forsale) {    
-	   System.out.println("ÉÌµê1ÏúÊÛ×Ü¼Û£º " + forsale.getPrice()*forsale.getNumber());
+	   System.out.println("ï¿½Ìµï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û£ï¿½ " + forsale.getPrice()*forsale.getNumber());
+	   ResList resList = ResList.Instance();
+	   resList.money += forsale.getPrice()*forsale.getNumber();
 	   return forsale.getPrice()*forsale.getNumber();
 	}
 	
 	protected int sale(Goods forsale) {    
-		   System.out.println("ÉÌµê1ÏúÊÛ×Ü¼Û£º " + forsale.getPrice()*forsale.getNumber());
+		   System.out.println("ï¿½Ìµï¿½1ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û£ï¿½ " + forsale.getPrice()*forsale.getNumber());
+		   ResList resList = ResList.Instance();
+		   resList.money += forsale.getPrice()*forsale.getNumber();
 		   return forsale.getPrice()*forsale.getNumber();
 	}
 }

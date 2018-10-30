@@ -1,5 +1,6 @@
 package construction;
 
+import buy.ResList;
 import thing.Goods;
 import thing.Product;
 
@@ -9,11 +10,15 @@ public class MeatStore extends Store{
 	} 
 	
 	protected int sale(Product forsale) {    
-		System.out.println("ÉÌµê2ÏúÊÛ×Ü¼Û£º " + forsale.getPrice()*forsale.getNumber());
+		System.out.println("ï¿½Ìµï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û£ï¿½ " + forsale.getPrice()*forsale.getNumber());
+		ResList resList = ResList.Instance();
+		resList.money += forsale.getPrice()*forsale.getNumber();
 		return forsale.getPrice()*forsale.getNumber();
 	}
 	protected int sale(Goods forsale) {    
-		   System.out.println("ÉÌµê2ÏúÊÛ×Ü¼Û£º " + forsale.getPrice()*forsale.getNumber());
-		   return forsale.getPrice()*forsale.getNumber();
+		System.out.println("ï¿½Ìµï¿½2ï¿½ï¿½ï¿½ï¿½ï¿½Ü¼Û£ï¿½ " + forsale.getPrice()*forsale.getNumber());
+		ResList resList = ResList.Instance();
+		resList.money += forsale.getPrice()*forsale.getNumber();
+		return forsale.getPrice()*forsale.getNumber();
 	}
 }

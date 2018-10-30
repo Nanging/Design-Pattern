@@ -1,6 +1,8 @@
 package construction;
 
 import java.util.ArrayList;
+
+import buy.ResList;
 import construction.LivestockFarm;
 
 public class Animalhouse implements BuildingAction {
@@ -21,14 +23,19 @@ public class Animalhouse implements BuildingAction {
 	}
 
 
-	@Override
 	public void build() {
-		// TODO Auto-generated method stub
-		
+		ResList resList=ResList.Instance();
+		if(resList.money<150) {
+			System.out.println("Your money is not enough");
+			return;
+		}
+		else {
+			resList.money=resList.money-150;
+		}
+		System.out.println("The factory have been built!");
 	}
 
 
-	@Override
 	public void repair() {
 		// TODO Auto-generated method stub
 		

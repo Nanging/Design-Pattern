@@ -7,21 +7,23 @@ public class BuildingTest {
 	
 	public static void main(String[] args) {
 		
-		BuildingFactory test=new BuildingFactory();    //建造建筑模板类
-		Factory aaa=(Factory)test.produce("factory");  //建造工厂
+		BuildingFactory test=new BuildingFactory();    //锟斤拷锟届建锟斤拷模锟斤拷锟斤拷
+		Factory aaa=(Factory)test.produce("factory");  //锟斤拷锟届工锟斤拷
 		
-		Product a=new Product();                       //实例化原料
+		Product a=new Product();                       //实锟斤拷锟斤拷原锟斤拷
 		a.setType(2);
 		a.setNumber(4);
 		a.setPrice(5);
-		Goods s=aaa.deal(a);                           //加工原料，得到商品，价格翻倍
-		Sale.sale(s);                                  //售卖商品
+		Goods s=aaa.deal(a);                           //锟接癸拷原锟较ｏ拷锟矫碉拷锟斤拷品锟斤拷锟桔格翻憋拷
+		Sale.sale(s);                                  //锟斤拷锟斤拷锟斤拷品
 		
 		Product b=new Product();
 		b.setNumber(3);
 		b.setPrice(8);
 		b.setType(7);
-		Sale.sale(b);                                  //售卖原料
+		Sale.sale(b);                                  //锟斤拷锟斤拷原锟斤拷
+		
+		aaa.dealAndSell(b);
 	}
 
 }

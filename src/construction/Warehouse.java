@@ -1,11 +1,21 @@
 package construction;
+import buy.ResList;
 import thing.Product;
 
 public class Warehouse implements BuildingAction {
 	
+	
 	private int [] catalog=new int [4];
 	
 	public void build() {
+		ResList resList=ResList.Instance();
+		if(resList.money<200) {
+			System.out.println("Your money is not enough");
+			return;
+		}
+		else {
+			resList.money=resList.money-200;
+		}
 		System.out.println("The warehouse have been built!");
 		for(int i=0;i<catalog.length;i++) {
 			catalog[i]=0;
@@ -13,6 +23,14 @@ public class Warehouse implements BuildingAction {
 	}
 	
 	public void repair() {
+		ResList resList=ResList.Instance();
+		if(resList.money<20) {
+			System.out.println("Your money is not enough");
+			return;
+		}
+		else {
+			resList.money=resList.money-20;
+		}
 		System.out.println("The warehouse is being repaired!");
 	}
 	
