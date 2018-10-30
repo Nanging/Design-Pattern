@@ -35,7 +35,7 @@ public class FieldContainer {
 	 *  开垦一块土地
 	 */
 	public void makeNewLand() {
-		int num = cultivatedLands.size()+uncultivatedLands.size()+1;
+		int num = cultivatedLands.size()+uncultivatedLands.size();
 		uncultivatedLands.add(new Land(num));
 		System.out.println("Land"+num+"created!");
 		
