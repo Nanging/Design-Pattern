@@ -17,7 +17,7 @@ public class Cow extends Livestock {
 		Carrier newCarrier=new Carrier(new Product(ProductType.MILK,9));
 		newCarrier.carryToWareHouse();
 	}
-
+	//¼·ÄÌ
 	public boolean getMilk()
 	{
 		if(nowstate.getState() == 1 )
