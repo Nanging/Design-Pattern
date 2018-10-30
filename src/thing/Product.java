@@ -1,5 +1,5 @@
 package thing;
 
-public interface Product {
+public class Product {
 
 }

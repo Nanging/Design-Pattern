@@ -1,10 +1,10 @@
 package plant;
 
-import thing.AbstractPlantGrowState;
+import thing.PlantState;
 import thing.Product;
 
 public abstract class Plant {
-	protected AbstractPlantGrowState growState;
+	protected PlantState growState;
 	
 	public void fertilized() {
 		// TODO Auto-generated method stub
@@ -20,13 +20,9 @@ public abstract class Plant {
 		return harvest(growState);
 	}
 	
-	public abstract boolean harvest(AbstractPlantGrowState state);
+	public abstract boolean harvest(PlantState state);
 	public abstract Product getResult();
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
-
-	}
-	public void changeState(AbstractPlantGrowState state) {
+	public void changeState(PlantState state) {
 		growState = state;
 	}
 

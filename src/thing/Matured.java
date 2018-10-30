@@ -2,14 +2,14 @@ package thing;
 
 import plant.Plant;
 
-public class RipeState implements AbstractPlantGrowState{
-	static private RipeState state = null;
-	private  RipeState() {
+public class Matured implements PlantState{
+	static private Matured state = null;
+	private  Matured() {
 		// TODO Auto-generated constructor stub
 	}
-	static public RipeState getInstance() {
+	static public Matured getInstance() {
 		if (state == null) {
-			state = new RipeState();
+			state = new Matured();
 		}
 		return state;
 	}

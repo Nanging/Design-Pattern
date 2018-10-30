@@ -2,14 +2,14 @@ package thing;
 
 import plant.Plant;
 
-public class PlumuleState implements AbstractPlantGrowState{
-	static private PlumuleState state = null;
-	private  PlumuleState() {
+public class Raw implements PlantState{
+	static private Raw state = null;
+	private  Raw() {
 		// TODO Auto-generated constructor stub
 	}
-	static public PlumuleState getInstance() {
+	static public Raw getInstance() {
 		if (state == null) {
-			state = new PlumuleState();
+			state = new Raw();
 		}
 		return state;
 	}

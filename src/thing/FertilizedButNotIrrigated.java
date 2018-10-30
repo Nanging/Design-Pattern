@@ -2,7 +2,7 @@ package thing;
 
 import plant.Plant;
 
-public class FertilizedButNotIrrigated implements AbstractPlantGrowState{
+public class FertilizedButNotIrrigated implements PlantState{
 	static private FertilizedButNotIrrigated state = null;
 	private  FertilizedButNotIrrigated() {
 		// TODO Auto-generated constructor stub
@@ -29,7 +29,7 @@ public class FertilizedButNotIrrigated implements AbstractPlantGrowState{
 	@Override
 	public void irrigated(Plant plant) {
 		// TODO Auto-generated method stub
-		plant.changeState(RipeState.getInstance());
+		plant.changeState(Matured.getInstance());
 	}
 	@Override
 	public boolean harvest(Plant plant) {

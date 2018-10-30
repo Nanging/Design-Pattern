@@ -1,5 +1,5 @@
 package thing;
-
+import machine.*;
 import java.util.ArrayList;
 import plant.Seed;
 
@@ -7,10 +7,12 @@ public class FieldContainer {
 	private static FieldContainer instance = null;
 	private ArrayList<Land> cultivatedLands;
 	private ArrayList<Land> uncultivatedLands;
+	private MachineSchedule machine;
 	private FieldContainer() {
 		// TODO Auto-generated constructor stub
 		cultivatedLands = new ArrayList<>();
 		uncultivatedLands = new ArrayList<>();
+		machine=new MachineSchedule();
 	}
 	public static FieldContainer getInstance() {
 		if (instance==null) {
@@ -18,8 +20,14 @@ public class FieldContainer {
 		}
 		return instance;
 	}
+	public ArrayList<Land> getLands(){
+		return cultivatedLands;
+	}
 	public void makeNewLand() {
-		cultivatedLands.add(new Land(cultivatedLands.size()+uncultivatedLands.size()+1));
+		int num=cultivatedLands.size()+uncultivatedLands.size()+1;
+		cultivatedLands.add(new Land(num));
+		System.out.println("Land"+num+"created!");
+		
 	}
 	private Land getLand(int landID) {
 		for (int i = 0; i < cultivatedLands.size(); i++) {
@@ -60,9 +68,6 @@ public class FieldContainer {
 			land.harvest();
 		}
 	}
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
 
-	}
 
 }
