@@ -1,9 +1,9 @@
-package Livestock;
+package livestock;
 
-import Livestock.livestock.species;
+import livestock.Livestock.species;
 
-public class sheep extends livestock {
-	public sheep(int id)
+public class Sheep extends Livestock {
+	public Sheep(int id)
 	{
 		super(id,species.sheep,species.sheep.getPrice());
 	}
