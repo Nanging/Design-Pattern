@@ -8,6 +8,9 @@ public class FieldContainer {
 	private ArrayList<Land> cultivatedLands;
 	private ArrayList<Land> uncultivatedLands;
 	private MachineSchedule machine;
+	public MachineSchedule machineReady() {
+		return machine;
+	}
 	private FieldContainer() {
 		// TODO Auto-generated constructor stub
 		cultivatedLands = new ArrayList<>();
