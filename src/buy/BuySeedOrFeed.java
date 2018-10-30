@@ -1,6 +1,5 @@
 package buy;
 
-import buy.ResList.s_type;
 
 public class BuySeedOrFeed extends Buy {
 
@@ -8,10 +7,15 @@ public class BuySeedOrFeed extends Buy {
 	public void addToList(int type, int num) {
 		ResList reslist = ResList.Instance();
 		reslist.s_list[type] += num;
-		//switch type{
+		switch (type){
+		case 0:	case 1:	case 2:	case 3:
+			reslist.money-=num;
+			break;
+		case 4:
+			reslist.money-=2*num;
+			break;
+		};
 		
-		//}
-		//reslist.money-=();
 	}
 
 }
