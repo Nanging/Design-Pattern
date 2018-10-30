@@ -3,7 +3,7 @@ package thing;
 public class Carrier {
 	private Product item;
 	public Carrier(Product p) {
-		item=p;
+		item= p;
 	}
 	public void carryToWareHouse() {
 		

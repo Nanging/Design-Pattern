@@ -3,12 +3,10 @@ package thing;
 import plant.Plant;
 
 public class Land {
-	private Plant plant = null;
-	private int landID;
-	public static void main(String[] args) {
-		// TODO Auto-generated method stub
+	
+	private Plant plant = null;//土地上的植物
+	private int landID; //土地的序号
 
-	}
 	public int getLandID() {
 		return landID;
 	}

@@ -5,9 +5,12 @@ import plant.Seed;
 
 public class FieldContainer {
 	private static FieldContainer instance = null;
-	private ArrayList<Land> cultivatedLands;
-	private ArrayList<Land> uncultivatedLands;
-	private MachineSchedule machine;
+	private ArrayList<Land> cultivatedLands; //种植的土地
+	private ArrayList<Land> uncultivatedLands; //未种植的土地集合
+	private MachineSchedule machine; 	// 田地配置的机器
+	/**
+	 *  获得就绪的机器
+	 */
 	public MachineSchedule machineReady() {
 		return machine;
 	}
@@ -26,13 +29,21 @@ public class FieldContainer {
 	public ArrayList<Land> getLands(){
 		return cultivatedLands;
 	}
+	/**
+	 *  开垦一块土地
+	 */
 	public void makeNewLand() {
-		int num=cultivatedLands.size()+uncultivatedLands.size()+1;
-		cultivatedLands.add(new Land(num));
+		int num = cultivatedLands.size()+uncultivatedLands.size()+1;
+		uncultivatedLands.add(new Land(num));
 		System.out.println("Land"+num+"created!");
 		
 	}
-	private Land getLand(int landID) {
+	/**
+	 * 在已经种植的土地中查找指定土地
+	 * @param landID
+	 * @return 指定土地
+	 */
+	private Land getLandFromCultivatedLands(int landID) {
 		for (int i = 0; i < cultivatedLands.size(); i++) {
 			if (cultivatedLands.get(i).getLandID() == landID) {
 				return cultivatedLands.get(i);
@@ -40,33 +51,58 @@ public class FieldContainer {
 		}
 		return null;
 	}
-	public boolean sow(Seed seed,int landID) {
-		Land land = getLand(landID);
+	/**
+	 * 获得指定未种植土地
+	 * @param landID
+	 * @return 指定土地
+	 */
+	private Land getLandFromUncultivatedLands(int landID) {
+		for (int i = 0; i < uncultivatedLands.size(); i++) {
+			if (uncultivatedLands.get(i).getLandID() == landID) {
+				return uncultivatedLands.get(i);
+			}
+		}
+		return null;
+	}
+	/**
+	 * 对指定的土地进行播种
+	 * @param seed
+	 * @param landID
+	 */
+	public void sow(Seed seed,int landID) {
+		Land land = getLandFromUncultivatedLands(landID);
 		if (land!=null) {
 			land.sow(seed.createItem());
+			uncultivatedLands.remove(land);
+			cultivatedLands.add(land);
 		}
-		return false;
 	}
+	/**
+	 *  清楚指定土地上的作物
+	 * @param landID
+	 */
 	public void remove(int landID) {
-		Land land = getLand(landID);
+		Land land = getLandFromCultivatedLands(landID);
 		if (land!=null) {
-			land.remove();;
+			land.remove();
+			cultivatedLands.remove(land);
+			uncultivatedLands.add(land);
 		}
 	}
 	public void fertilize(int landID) {
-		Land land = getLand(landID);
+		Land land = getLandFromCultivatedLands(landID);
 		if (land!=null) {
 			land.fertilize();
 		}
 	}
 	public void irrigate(int landID) {
-		Land land = getLand(landID);
+		Land land = getLandFromCultivatedLands(landID);
 		if (land!=null) {
 			land.irrigate();
 		}
 	}
 	public void harvest(int landID) {
-		Land land = getLand(landID);
+		Land land = getLandFromCultivatedLands(landID);
 		if (land!=null) {
 			land.harvest();
 		}
