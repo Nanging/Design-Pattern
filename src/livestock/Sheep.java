@@ -1,6 +1,9 @@
 package livestock;
 
 import livestock.Livestock.species;
+import thing.Carrier;
+import thing.Product;
+import thing.ProductType;
 
 public class Sheep extends Livestock {
 	public Sheep(int id)
