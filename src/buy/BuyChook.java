@@ -1,16 +1,17 @@
 package buy;
-import livestock.*;
+import livestock.Livestock;
 import java.util.Vector;
+import livestock.Chook;
 
 import buy.ResList.l_type;
 
-public class BuyOx extends BuyLivestock{
-	private int type = l_type.ox.id();//指明该类type对应的枚举量
-
+public class BuyChook extends BuyLivestock{
+	private int type = l_type.chook.id();//指明该类type对应的枚举量
+	
 	@Override
 	public Livestock create(int id) {	
-		Livestock ox = new Ox(id);
-		return ox;
+		Livestock chook = new Chook(id);
+		return chook;
 	}
 	
 	@Override

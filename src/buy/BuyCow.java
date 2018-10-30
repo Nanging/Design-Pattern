@@ -4,13 +4,13 @@ import java.util.Vector;
 
 import buy.ResList.l_type;
 
-public class BuyOx extends BuyLivestock{
-	private int type = l_type.ox.id();//指明该类type对应的枚举量
-
+public class BuyCow extends BuyLivestock{
+	private int type = l_type.cow.id();//指明该类type对应的枚举量
+	
 	@Override
 	public Livestock create(int id) {	
-		Livestock ox = new Ox(id);
-		return ox;
+		Livestock cow = new Cow(id);
+		return cow;
 	}
 	
 	@Override
