@@ -1,6 +1,7 @@
 import java.util.Vector;
 
 import buy.*;
+import buy.ResList.s_type;
 import livestock.*;
 public class Main {
 
@@ -15,6 +16,8 @@ public class Main {
 		}
 		//示例买5个种子
 		new BuySeedOrFeed().addToList(0, 6);
+		
+		//float a = s_type.price(0);
 	}
 
 }
