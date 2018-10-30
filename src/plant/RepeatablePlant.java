@@ -7,7 +7,7 @@ public abstract class RepeatablePlant extends Plant {
 
 
 	@Override
-	public boolean harvest(PlantState state) {
+	public boolean harvest() {
 		// TODO Auto-generated method stub
 		growState.harvest(this);
 		return true;

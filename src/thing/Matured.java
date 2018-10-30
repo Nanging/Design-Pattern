@@ -16,7 +16,7 @@ public class Matured implements PlantState{
 	@Override
 	public void showState() {
 		// TODO Auto-generated method stub
-		
+		System.out.println("Matured"); 
 	}
 
 	@Override
@@ -32,6 +32,7 @@ public class Matured implements PlantState{
 	@Override
 	public boolean harvest(Plant plant) {
 		// TODO Auto-generated method stub
+		
 		return true;
 	}
 

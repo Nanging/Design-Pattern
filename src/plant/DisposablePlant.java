@@ -9,9 +9,12 @@ public abstract class DisposablePlant extends Plant {
 	 * 
 	 */
 	@Override
-	public boolean harvest(PlantState state) {
+	public boolean harvest() {
 		// TODO Auto-generated method stub
-		growState.harvest(this);
-		return false;
+		if(growState.harvest(this)) {
+			
+			return false;
+		}
+		return true;
 	}
 }

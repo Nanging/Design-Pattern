@@ -7,9 +7,9 @@ public class Product {
 	private int number;
 	private int price;
 	private String productName;
-	private static Hashtable<Integer,String > shapeMap = new Hashtable<Integer, String>();
-	
-	public Product() {
+	private static Hashtable<Integer,String > shapeMap;
+	private static void initHashtable() {
+		shapeMap=new Hashtable<Integer, String>();
 		shapeMap.put(1,"CABBAGE");
 		shapeMap.put(2,"CARROT");
 		shapeMap.put(3,"APPLE");
@@ -19,6 +19,17 @@ public class Product {
 		shapeMap.put(7,"EGG");
 		shapeMap.put(8,"WOOL");
 		shapeMap.put(9,"MILK");
+	}
+	
+	public Product(ProductType ptype,int num) {
+		if(shapeMap==null) {
+			initHashtable();
+		}
+		type=ptype.getID();
+		number=1;
+	}
+	public Product() {
+
 	}
 	
 	public String getName(int catalog) {
