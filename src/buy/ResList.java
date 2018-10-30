@@ -28,7 +28,12 @@ public class ResList {
 	public int money;
 	
 	private final static ResList r = new ResList();//Singleton µ¥ÀýÄ£Ê½
-	private ResList(){};
+	private ResList(){
+		for(int i = 0; i < 6; i++){
+			Vector<Livestock> l = new Vector<Livestock>();
+			l_list.addElement(l);
+		}
+	};
 	public static ResList Instance(){
 		return r;
 	}
