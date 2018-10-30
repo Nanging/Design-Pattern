@@ -7,15 +7,11 @@ public class BuildingTest {
 	public static void main(String[] args) {
 		
 		BuildingFactory test=new BuildingFactory();
-		Warehouse aaa=(Warehouse)test.produce("warehouse");
-		aaa.store(new Product());
-		aaa.showAmount();
-		aaa.store(new Product());
-		aaa.showAmount();
-		aaa.getProduct(1,1);
-		aaa.showAmount();
-		aaa.getProduct(0,1);
-		aaa.showAmount();
+		Factory aaa=(Factory)test.produce("factory");
+		Product a=new Product();
+		a.setType(2);
+		a.setNumber(4);
+		aaa.deal(a);
 	}
 
 }

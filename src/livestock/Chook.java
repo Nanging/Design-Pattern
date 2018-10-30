@@ -13,7 +13,7 @@ public class Chook extends Livestock{
 	public void getProduct() {
 		// TODO Auto-generated method stub
 		Carrier newCarrier=new Carrier(new Product(ProductType.EGG,6));
-		newCarrier.carryToWarehouse();
+		newCarrier.carryToWareHouse();
 		
 	}
 	public boolean getEgg() {

@@ -1,10 +1,10 @@
 package buy;
-import test.ResList;
-import test.LiveStock;
+import buy.ResList;
+import livestock.*;
 
 public abstract class BuyLiveStock extends Buy {
-	private LiveStock newLiveStock=null;
-	private LiveStock[] newLiveStockList=null;
+	private Livestock newLiveStock=null;
+	private Livestock[] newLiveStockList=null;
 	public int type;
 
 	@Override
@@ -13,8 +13,8 @@ public abstract class BuyLiveStock extends Buy {
 		ResList.Instance().l_list.get(type).add(newLiveStock);
 	}
 	//在create()里面务必指定int type
-	public abstract LiveStock create();
-	public LiveStock start() {
+	public abstract Livestock create();
+	public Livestock start() {
 		if(checkShed()) {
 			newLiveStock=create();
 			addToList(type, 1);
@@ -24,7 +24,7 @@ public abstract class BuyLiveStock extends Buy {
 			return null;
 		}
 	}
-	public LiveStock[] start(int num) {
+	public Livestock[] start(int num) {
 		if(checkShed()) {
 			for(int i=0;i<num;i++) {
 				newLiveStockList[i]=create();
@@ -38,6 +38,6 @@ public abstract class BuyLiveStock extends Buy {
 	}
 	public boolean checkShed() {
 		//check farm whether have room or not
-		
+		return true;
 	}
 }

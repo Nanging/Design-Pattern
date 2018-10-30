@@ -1,8 +1,12 @@
 package construction;
-import thing.Product;
+import thing.*;
+
 
 public class Factory implements BuildingAction {
 	
+	public Factory() {
+		GoodsCache.loadCache();
+	}
 	
 	public void build() {
 		System.out.println("The factory have been built!");
@@ -17,7 +21,13 @@ public class Factory implements BuildingAction {
 		System.out.println("The factory have been destoryed!");
 	}
 	
-	public void deal(Product product) {
-		product.getPrice();    //获取当前物品处理完的价格
+	public Goods deal(Product product) {
+		Goods clonedGoods=(Goods)GoodsCache.getShape(product.getType());
+		clonedGoods.setNumber(product.getNumber());
+		clonedGoods.setPrice(product.getPrice()*2);
+		return clonedGoods;
+//		System.out.println(clonedGoods.getGoodsType());
+//		System.out.println(clonedGoods.getNumber());
 	}
+	
 }
