@@ -1,6 +1,5 @@
 package construction;
 
-import com.sun.javafx.property.adapter.ReadOnlyPropertyDescriptor.ReadOnlyListener;
 import buy.*;
 
 import thing.Goods;
