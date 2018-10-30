@@ -2,24 +2,25 @@ package construction;
 
 import java.util.ArrayList;
 import construction.LivestockFarm;
+import livestock.Chook;
+import livestock.Cow;
+import livestock.Ox;
+import livestock.Pig;
+import livestock.Sheep;
 
 public class Animalhouse implements BuildingAction {
 	
 	
-	private LivestockFarm livsetockFarms;
-	
+//	private LivestockFarm livsetockFarms;
+	public LivestockFarm livsetockFarmPig;
+	public LivestockFarm livsetockFarmCow;
+	public LivestockFarm livsetockFarmOx;
+	public LivestockFarm livsetockFarmChook;
+	public LivestockFarm livsetockFarmSheep;
 
 	public Animalhouse() {
-		livsetockFarms = new LivestockFarm();
-	}
-	
 
-	public LivestockFarm buildLivestockFarm() {
-		
-		System.out.println("The animalhouse have been built!");
-		return livsetockFarms;
 	}
-
 
 	@Override
 	public void build() {

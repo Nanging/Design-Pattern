@@ -14,14 +14,14 @@ public class Sale {
 		return vegStore;  
 	}
 	
-	public static int sale(Product product) {
+	public static void sale(Product product) {
 		Store storeChain = getChainOfStores();
-		return storeChain.storeMessage(product);
+		storeChain.storeMessage(product);
 	}
 	
-	public static int sale(Goods product) {
+	public static void sale(Goods product) {
 		Store storeChain = getChainOfStores();
-		return storeChain.storeMessage(product);
+		storeChain.storeMessage(product);
 	}
 		 
 }
