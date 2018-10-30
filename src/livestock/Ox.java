@@ -8,9 +8,9 @@ import thing.LivestockState;
 
 
 public abstract class Ox extends Livestock {
-	public Ox(int id,species s,float price)
+	public ox(int id)
 	{
-		super(id,s,price);
+		super(id,species.ox,species.ox.getPrice());
 	}
 	public void getProduct() {
 		// TODO Auto-generated method stub
