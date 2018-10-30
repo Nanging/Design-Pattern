@@ -20,14 +20,14 @@ public class Pig extends Livestock {
 	{
 		if(nowstate.getState()==1)
 		{
-			System.out.println("屠宰完成");
-			//获得产品，猪肉
+			System.out.println("Slaughter success");
+			//Get pork
 			getProduct();
 			nowstate.died();
 			return true;
 		}
 		else {
-			System.out.println("还不能屠宰");
+			System.out.println("Not slaughtering yet.");
 			return false;
 		}
 	}

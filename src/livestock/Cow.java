@@ -17,20 +17,20 @@ public class Cow extends Livestock {
 		Carrier newCarrier=new Carrier(new Product(ProductType.MILK,9));
 		newCarrier.carryToWareHouse();
 	}
-	//挤奶
+	//Milk
 	public boolean getMilk()
 	{
 		if(nowstate.getState() == 1 )
 		{
-			System.out.println("挤奶完成");
-			//挤奶完成
+			System.out.println("Milking Success");
+			//Milking Success
 			nowstate.setDrinkTime();
 			nowstate.setFeedTime();
 			getProduct();
 			return true;
 		}
 		else {
-			System.out.println("还不能挤奶");
+			System.out.println("Not milking yet.");
 			return false;
 		}
 	}

@@ -4,9 +4,9 @@ import livestock.Livestock.species;
 import thing.Carrier;
 import thing.Product;
 import thing.ProductType;
-//继承Livestock类
+
 public class Chook extends Livestock{
-	//构造函数
+	//Constructor
 	public Chook (int id)
 	{
 		super(id,species.chook,species.chook.getPrice());
@@ -17,20 +17,20 @@ public class Chook extends Livestock{
 		newCarrier.carryToWareHouse();
 		
 	}
-	//收鸡蛋
+	//Egg collection
 	public boolean getEgg() {
-		//鸡已下蛋
+		//Chickens have laid eggs
 		if(nowstate.getState()==1)
 		{
 			System.out.println("获得鸡蛋");
-			//获得鸡蛋
-			
-			//重置鸡的状态
+			//Get eggs
+			getProduct();
+			//Reset chicken status
 			nowstate.setFeedTime();
 			nowstate.setDrinkTime();
 			return true;
 		}
-		//鸡未下蛋
+		//The chicken does not lay eggs
 		else {
 			System.out.println("没有鸡蛋");
 			return false;
