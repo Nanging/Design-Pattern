@@ -13,7 +13,8 @@ public class Main {
 		{
 			System.out.print(fivePigs.get(i).getId());
 		}
-		
+		//示例买5个种子
+		new BuySeedOrFeed().addToList(0, 6);
 	}
 
 }

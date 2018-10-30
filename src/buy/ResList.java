@@ -14,7 +14,7 @@ public class ResList {
 		}
 	};//牲畜类型
 	public enum s_type{
-		CabbageSeed(0),CarrotSeed(1),AppleSeed(2),PearSeed(3);
+		CabbageSeed(0),CarrotSeed(1),AppleSeed(2),PearSeed(3),feed(4);
 		private int type;
 		private s_type(int i){
 			this.type = i;
@@ -22,9 +22,9 @@ public class ResList {
 		public int id(){
 			return type;
 		}
-	};//种子或幼苗类型
+	};//种子幼苗类型或饲料
 	public Vector<Vector<Livestock>> l_list = new Vector<Vector<Livestock>>(10);//存储不同牲畜个体
-	public int[] s_list = new int[10];//存储不同种子或幼苗数量
+	public int[] s_list = new int[10];//存储不同种子幼苗或饲料数量
 	public int money;
 	
 	private final static ResList r = new ResList();//Singleton 单例模式
