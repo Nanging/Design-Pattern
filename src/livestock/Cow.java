@@ -6,10 +6,10 @@ import thing.Product;
 import thing.ProductType;
 import thing.LivestockState;
 
-public abstract class Cow extends Livestock {
-	public Cow (int id,species s,float price)
+public class Cow extends Livestock {
+	public Cow (int id)
 	{
-		super(id,s,price);
+		super(id,species.cow,species.cow.getPrice());
 	}
 	
 	public void getProduct() {

@@ -6,9 +6,9 @@ import thing.Product;
 import thing.ProductType;
 
 public class Pig extends Livestock {
-	public Pig(int id,species s,float price)
+	public Pig(int id)
 	{
-		super(id,s,price);
+		super(id,species.pig,species.pig.getPrice());
 	}
 	public void getProduct() {
 		// TODO Auto-generated method stub

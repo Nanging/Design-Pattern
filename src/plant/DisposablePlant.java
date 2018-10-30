@@ -1,13 +1,7 @@
 package plant;
 
-import thing.PlantState;
-
 public abstract class DisposablePlant extends Plant {
 	
-
-	/*
-	 * 
-	 */
 	@Override
 	public boolean harvest() {
 		// TODO Auto-generated method stub
