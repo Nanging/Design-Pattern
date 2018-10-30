@@ -27,7 +27,7 @@ public class Matured implements PlantState{
 	@Override
 	public void irrigated(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("Akreadt Matured");
+		System.out.println("Already Matured");
 	}
 	@Override
 	public boolean harvest(Plant plant) {
