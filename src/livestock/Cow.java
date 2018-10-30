@@ -15,7 +15,7 @@ public abstract class Cow extends Livestock {
 	public void getProduct() {
 		// TODO Auto-generated method stub
 		Carrier newCarrier=new Carrier(new Product(ProductType.MILK,9));
-		newCarrier.carryToWarehouse();
+		newCarrier.carryToWareHouse();
 	}
 
 	public boolean getMilk()

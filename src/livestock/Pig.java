@@ -13,7 +13,7 @@ public class Pig extends Livestock {
 	public void getProduct() {
 		// TODO Auto-generated method stub
 		Carrier newCarrier=new Carrier(new Product(ProductType.PORK,5));
-		newCarrier.carryToWarehouse();
+		newCarrier.carryToWareHouse();
 		
 	}
 	public boolean slaughter()

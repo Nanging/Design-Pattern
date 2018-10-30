@@ -15,7 +15,7 @@ public abstract class Ox extends Livestock {
 	public void getProduct() {
 		// TODO Auto-generated method stub
 		Carrier newCarrier=new Carrier(new Product(ProductType.BEEF,9));
-		newCarrier.carryToWarehouse();
+		newCarrier.carryToWareHouse();
 		
 	}
 	public boolean slaughter()
