@@ -15,39 +15,39 @@ public class GoodsCache {
     public static void loadCache() {
 	 
 		CabbageGoods cabbageGoods = new CabbageGoods();
-		cabbageGoods.setId(1);
+		cabbageGoods.setId(0);
 		shapeMap.put(cabbageGoods.getId(),cabbageGoods);
 		
 		CarrotGoods carrotGoods = new CarrotGoods();
-		carrotGoods.setId(2);
+		carrotGoods.setId(1);
 		shapeMap.put(carrotGoods.getId(),carrotGoods);
 		
 		AppleGoods appleGoods = new AppleGoods();
-		appleGoods.setId(3);
+		appleGoods.setId(2);
 		shapeMap.put(appleGoods.getId(),appleGoods);
 		
 		PearGoods pearGoods = new PearGoods();
-		pearGoods.setId(4);
+		pearGoods.setId(3);
 		shapeMap.put(pearGoods.getId(),pearGoods);
 		
 		BeefGoods beefGoods = new BeefGoods();
-		beefGoods.setId(5);
+		beefGoods.setId(4);
 		shapeMap.put(beefGoods.getId(),beefGoods);
 		
 		PorkGoods porkGoods = new PorkGoods();
-		porkGoods.setId(6);
+		porkGoods.setId(5);
 		shapeMap.put(porkGoods.getId(),porkGoods);
 		
 		EggGoods eggGoods = new EggGoods();
-		eggGoods.setId(7);
+		eggGoods.setId(6);
 		shapeMap.put(eggGoods.getId(),eggGoods);
 		
 		WoolGoods woolGoods = new WoolGoods();
-		woolGoods.setId(8);
+		woolGoods.setId(7);
 		shapeMap.put(woolGoods.getId(),woolGoods);
 
 		MilkGoods milkGoods = new MilkGoods();
-		milkGoods.setId(9);
+		milkGoods.setId(8);
 		shapeMap.put(milkGoods.getId(),milkGoods);
 
 
