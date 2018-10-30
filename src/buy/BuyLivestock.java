@@ -4,7 +4,7 @@ import java.util.Vector;
 
 public abstract class BuyLivestock extends Buy{
 	ResList reslist = ResList.Instance();
-	public Vector<Livestock> llist = null;
+	public Vector<Livestock> llist = new Vector<Livestock>();
 	
 	public void addToList(int type, int num){//添加新增牲畜至列表
 		reslist.l_list.get(type).addAll(llist);
