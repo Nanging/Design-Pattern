@@ -1,15 +1,15 @@
-package prototype_visitor;
+package weather;
 import java.util.Iterator;
-public class listvisitor extends visitor {
+public class Listvisitor extends Visitor {
 
 	@Override
-	public void visit(wstate state) {
+	public void visit(Wstate state) {
 		// TODO Auto-generated method stub
 		System.out.println(state.getName());
-		 Iterator<wstate> it=state.iterator();
+		 Iterator<Wstate> it=state.iterator();
 		while(it.hasNext()) 
 		{
-		 wstate s=(wstate)it.next();
+		 Wstate s=(Wstate)it.next();
 		 System.out.println(s.getName());
 		}
 	}

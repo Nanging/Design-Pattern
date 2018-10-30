@@ -40,7 +40,7 @@ public class Raw implements PlantState{
 	@Override
 	public boolean harvest(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("还不能收获");
+		System.out.println("cannot harvest yet");
 		return false;
 	}
 

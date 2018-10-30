@@ -1,39 +1,40 @@
-package prototype_visitor;
+package weather;
 
-public class windy extends wstate{
-	private static int _count=1;
+public class Rainy extends Wstate{
 	private int _id;
-	public windy() {addPrototype(this);wstate.array.add(this);};
-	private static windy _grazestate;
+	private static int _count=1;
+	private static Rainy _freestate;
+	public Rainy() {addPrototype(this);Wstate.array.add(this);};
 
-	protected windy(int i) {
+	protected Rainy(int i) {
 		// TODO Auto-generated constructor stub
 		_id=_count++;
 	}
 
 	@Override
-	protected weather returnType() {
+	protected Weather returnType() {
 		// TODO Auto-generated method stub
-		return weather.windy;
+		return Weather.rainy;
 	}
+	
 	 //protected void finalize() {_count--;};
 
 	@Override
-	public wstate copy() {
+	public Wstate copy() {
 		// TODO Auto-generated method stub
-		windy s=new windy(1);
-		wstate.array.add(s);
+		Rainy s=new Rainy(1);
+		Wstate.array.add(s);
 		return s;
 	}
 
 	@Override
 	public void work() {
 		// TODO Auto-generated method stub
-		System.out.println("Weather::windy"+_id);
+		System.out.println("Weather::rainy"+_id);
 	}
 
 	@Override
-	public void accept(visitor v) {
+	public void accept(Visitor v) {
 		// TODO Auto-generated method stub
 		v.visit(this);
 	}
@@ -41,7 +42,7 @@ public class windy extends wstate{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		String name="Weather::windy"+_id;
+		String name="Weather::rainy"+_id;
 		return name;
 	}
 

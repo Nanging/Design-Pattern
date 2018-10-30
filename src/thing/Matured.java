@@ -22,17 +22,17 @@ public class Matured implements PlantState{
 	@Override
 	public void fertilized(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("已经可以收获了");
+		System.out.println("Already Matured");
 	}
 	@Override
 	public void irrigated(Plant plant) {
 		// TODO Auto-generated method stub
-		System.out.println("已经可以收获了");
+		System.out.println("Akreadt Matured");
 	}
 	@Override
 	public boolean harvest(Plant plant) {
 		// TODO Auto-generated method stub
-		
+		System.out.println("harvest!");
 		return true;
 	}
 

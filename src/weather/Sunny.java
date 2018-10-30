@@ -1,25 +1,25 @@
-package prototype_visitor;
+package weather;
 
-public class sunny extends wstate {
-private static sunny _framestate;
-public sunny() {addPrototype(this);wstate.array.add(this);}
+public class Sunny extends Wstate {
+private static Sunny _framestate;
+public Sunny() {addPrototype(this);Wstate.array.add(this);}
 private int _id;
 private static int _count=1;
-protected sunny(int dummy) {_id=_count++;}
+protected Sunny(int dummy) {_id=_count++;}
 	@Override
-	protected weather returnType() {
+	protected Weather returnType() {
 		// TODO Auto-generated method stub
-		return weather.sunny;
+		return Weather.sunny;
 	}
 	
 	protected void finalize() {_count--;};
 
 
 	@Override
-	public wstate copy() {
+	public Wstate copy() {
 		// TODO Auto-generated method stub
-		sunny s=new sunny(1);
-		wstate.array.add(s);
+		Sunny s=new Sunny(1);
+		Wstate.array.add(s);
 		return s;
 	}
 	@Override
@@ -28,7 +28,7 @@ protected sunny(int dummy) {_id=_count++;}
 		System.out.println("Weather::sunny"+_id);
 	}
 	@Override
-	public void accept(visitor v) {
+	public void accept(Visitor v) {
 		// TODO Auto-generated method stub
 		v.visit(this);
 	}
