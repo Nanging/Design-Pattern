@@ -29,7 +29,7 @@ public class Product {
 		number=1;
 	}
 	public Product() {
-
+		initHashtable();
 	}
 	
 	public String getName(int catalog) {
