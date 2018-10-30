@@ -9,12 +9,12 @@ public class VegStore extends Store{
 	}
 	
 	protected int sale(Product forsale) {    
-	   System.out.println("sale1 " + forsale.getPrice());
+	   System.out.println("商店1销售总价： " + forsale.getPrice()*forsale.getNumber());
 	   return forsale.getPrice()*forsale.getNumber();
 	}
 	
 	protected int sale(Goods forsale) {    
-		   System.out.println("sale1 " + forsale.getPrice());
+		   System.out.println("商店1销售总价： " + forsale.getPrice()*forsale.getNumber());
 		   return forsale.getPrice()*forsale.getNumber();
 	}
 }
