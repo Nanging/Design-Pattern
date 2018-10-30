@@ -10,10 +10,15 @@ public class Product {
 	private static Hashtable<Integer,String > shapeMap = new Hashtable<Integer, String>();
 	
 	public Product() {
-		shapeMap.put(1,"Egg");
-		shapeMap.put(2,"Chicken");
-		shapeMap.put(3,"Milk");
-		shapeMap.put(4,"Corn");
+		shapeMap.put(1,"CABBAGE");
+		shapeMap.put(2,"CARROT");
+		shapeMap.put(3,"APPLE");
+		shapeMap.put(4,"PEAR");
+		shapeMap.put(5,"BEEF");
+		shapeMap.put(6,"PORK");
+		shapeMap.put(7,"EGG");
+		shapeMap.put(8,"WOOL");
+		shapeMap.put(9,"MILK");
 	}
 	
 	public String getName(int catalog) {
