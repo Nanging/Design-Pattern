@@ -1,4 +1,5 @@
 package thing;
+import construction.*;
 //Mediate
 public class Carrier {
 	private Product item;
@@ -6,6 +7,6 @@ public class Carrier {
 		item= p;
 	}
 	public void carryToWareHouse() {
-		
+		Farm.getInstance().getWarehouse().store(item);
 	}
 }

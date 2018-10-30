@@ -2,7 +2,7 @@ package construction;
 
 public class BuildingFactory {
 	
-	public BuildingAction produce(String BulidingType) {
+	public static BuildingAction produce(String BulidingType) {
 		if("factory".equals(BulidingType)) {
 			return new Factory();
 		}else if("warehouse".equals(BulidingType)) {

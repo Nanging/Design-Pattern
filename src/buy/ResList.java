@@ -14,7 +14,7 @@ public class ResList {
 		}
 	};//ÉüĞóÀàĞÍ
 	public enum s_type{
-		seed1(0),seed2(1);
+		CabbageSeed(0),CarrotSeed(1),AppleSeed(2),PearSeed(3);
 		private int type;
 		private s_type(int i){
 			this.type = i;

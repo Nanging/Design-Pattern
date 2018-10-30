@@ -1,8 +1,10 @@
 package thing;
 import machine.*;
 import java.util.ArrayList;
-import plant.Seed;
 
+import plant.Plant;
+import plant.Seed;
+import buy.ResList;
 public class FieldContainer {
 	private static FieldContainer instance = null;
 	private ArrayList<Land> cultivatedLands; //种植的土地
@@ -66,13 +68,18 @@ public class FieldContainer {
 	}
 	/**
 	 * 对指定的土地进行播种
-	 * @param seed
+	 * @param type
 	 * @param landID
 	 */
-	public void sow(Seed seed,int landID) {
+	public void sow(int type,int landID) {
 		Land land = getLandFromUncultivatedLands(landID);
 		if (land!=null) {
-			land.sow(seed.createItem());
+			Plant plantToSow=Seed.createItem(type);
+			if(plantToSow==null) {
+				System.out.println("seed not enough");
+				return;
+			}
+			land.sow(plantToSow);
 			uncultivatedLands.remove(land);
 			cultivatedLands.add(land);
 		}
