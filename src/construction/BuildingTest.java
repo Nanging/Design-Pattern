@@ -1,5 +1,5 @@
 package construction;
-import fruit.Product;
+import thing.Product;
 
 public class BuildingTest {
 	

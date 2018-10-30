@@ -1,4 +1,4 @@
-package fruit;
+package thing;
 
 public class Product {
 	
