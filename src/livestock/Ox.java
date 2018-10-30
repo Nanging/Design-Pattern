@@ -18,6 +18,7 @@ public class Ox extends Livestock {
 		newCarrier.carryToWareHouse();
 		
 	}
+	//мютв
 	public boolean slaughter()
 	{
 		if(nowstate.getState() == 1 )
