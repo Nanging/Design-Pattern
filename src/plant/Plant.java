@@ -2,9 +2,10 @@ package plant;
 
 import thing.PlantState;
 import thing.Product;
+import thing.Raw;
 
 public abstract class Plant {
-	protected PlantState growState; // 植物生长状态
+	protected PlantState growState=Raw.getInstance(); // 植物生长状态
 	public void showPlantState() {
 		growState.showState();
 	}
