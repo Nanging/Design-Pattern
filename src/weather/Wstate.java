@@ -2,7 +2,7 @@ package weather;
 //workstate作为父类出现
 import java.util.Vector;
 import java.util.Iterator;
-abstract class Wstate implements Acceptor
+public abstract class Wstate implements Acceptor
 {
   private static Wstate[]_states=new Wstate[10];//存放各个state类型
   private static int _nextslot=0;

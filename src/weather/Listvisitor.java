@@ -10,7 +10,7 @@ public class Listvisitor extends Visitor {
 		while(it.hasNext()) 
 		{
 		 Wstate s=(Wstate)it.next();
-		 System.out.println(s.getName());
+		 System.out.println("Listvisitor is visiting  "+s.getName());
 		}
 	}
 
