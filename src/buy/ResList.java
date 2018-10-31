@@ -39,6 +39,16 @@ public class ResList {
 			l_list.addElement(l);
 		}
 	};
+	public ResMemento createMemento() {
+		return new ResMemento();
+	}
+	
+	public void setStateFromMemento(ResMemento memento) {
+		ResList resList = ResList.Instance();
+		resList.l_list = memento.l_list;
+		resList.money = memento.money;
+		resList.s_list = memento.s_list;
+	} 
 	public static ResList Instance(){
 		return r;
 	}
