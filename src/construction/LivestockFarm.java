@@ -7,10 +7,13 @@ import livestock.Livestock;
 
 public class LivestockFarm implements BuildingAction{
 	private ArrayList<Livestock> livestocks = new ArrayList<>();
-	private String name;
+	public String name;
 	public LivestockFarm(String name) {
 		// TODO Auto-generated constructor stub
 		this.name = name;
+	}
+	public String getName() {
+		return name;
 	}
 	public void addLivestock(Livestock newLivestock) {
 		livestocks.add(newLivestock);

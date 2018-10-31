@@ -17,11 +17,11 @@ public class AnimalhouseBuilder extends Builder{
 	@Override
 	public void createComponents() {
 		// TODO Auto-generated method stub
-		ah.livsetockFarmChook = new LivestockFarm("Chook");
-		ah.livsetockFarmCow = new LivestockFarm("Cow");
-		ah.livsetockFarmOx = new LivestockFarm("Ox");
-		ah.livsetockFarmPig = new LivestockFarm("Pig");
-		ah.livsetockFarmSheep = new LivestockFarm("Sheep");
+		ah.add(new LivestockFarm("Chook"));
+		ah.add(new LivestockFarm("Cow"));
+		ah.add(new LivestockFarm("Ox"));
+		ah.add( new LivestockFarm("Pig"));
+		ah.add( new LivestockFarm("Sheep"));
 	}
 
 }
