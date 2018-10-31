@@ -3,7 +3,7 @@ package livestock;
 import thing.LivestockState;
 
 public abstract class Livestock {
-	protected LivestockState nowstate;
+	public LivestockState nowstate;
 	private int id;
 	//Species enumeration,includiong prices
 	public enum species{
