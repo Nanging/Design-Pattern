@@ -5,7 +5,7 @@ import java.util.Vector;
 import buy.ResList.l_type;
 
 public class BuyPig extends BuyLivestock{
-	private int type = l_type.pig.id();//指明该类type对应的枚举量
+	private int type = l_type.pig.id();//Indicate the enumeration corresponding to the type
 	
 	@Override
 	public Livestock create(int id) {	

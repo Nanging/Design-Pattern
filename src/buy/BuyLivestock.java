@@ -6,7 +6,7 @@ public abstract class BuyLivestock extends Buy{
 	ResList reslist = ResList.Instance();
 	public Vector<Livestock> llist = new Vector<Livestock>();
 	
-	public void addToList(int type, int num){//添加新增牲畜至列表
+	public void addToList(int type, int num){//Add new livestock to the list
 		reslist.l_list.get(type).addAll(llist);
 		switch (type){
 			case 0:
@@ -27,6 +27,6 @@ public abstract class BuyLivestock extends Buy{
 		};
 	}
 
-	public abstract Livestock create(int id);	//调用该函数新生成牲畜
-	public abstract Vector<Livestock> start(int num);//调用该函数添加指定数量牲畜
+	public abstract Livestock create(int id);	//Call this function to generate new livestock
+	public abstract Vector<Livestock> start(int num);//Call this function to start buying
 }

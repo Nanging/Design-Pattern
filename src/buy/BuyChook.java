@@ -6,7 +6,7 @@ import livestock.Chook;
 import buy.ResList.l_type;
 
 public class BuyChook extends BuyLivestock{
-	private int type = l_type.chook.id();//指明该类type对应的枚举量
+	private int type = l_type.chook.id();//Indicate the enumeration corresponding to the type
 	
 	@Override
 	public Livestock create(int id) {	
@@ -15,7 +15,7 @@ public class BuyChook extends BuyLivestock{
 	}
 	
 	@Override
-	public Vector<Livestock> start(int num){//
+	public Vector<Livestock> start(int num){
 		int id1 = reslist.l_list.get(type).size();
 		for(int i = 0; i < num; i++){
 			llist.addElement(create(id1));
