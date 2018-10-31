@@ -10,7 +10,7 @@ public class FarmMaster {
 	}
 	//命令工人去做
 	public void call(Command command) {
-		WorkerList workerlist = new WorkerList();
+		WorkerList workerlist = WorkerList.getInstance();
 		for(Worker worker: workerlist.workList) {
 			if(command.execute(worker)) {
 				break;
@@ -32,17 +32,5 @@ public class FarmMaster {
 	
 	public void callManager(Command command) {
 		Manager.getInstance().call(command);
-	}
-
-	public void doFertilizeByManager(int landID) {
-		Manager.getInstance().fertilize(landID);
-	}
-
-	public void doIrrigateByManager(int landID) {
-		Manager.getInstance().irrigate(landID);
-	}
-
-	public void doHarvestByManager(int landID) {
-		Manager.getInstance().harvest(landID);
 	}
 }

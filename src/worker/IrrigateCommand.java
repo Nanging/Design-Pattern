@@ -2,8 +2,8 @@ package worker;
 
 public class IrrigateCommand extends Command{
 	public boolean execute(Worker a) {
-		if(a.type=="irrigate") {
-			((Irrigateman)a).irrigate(number);
+		if(!a.type.equals("fertilize")&&!a.type.equals("harvest")) {
+			a.action(number);
 			return true;
 		}
 		return false;

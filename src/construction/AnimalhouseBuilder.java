@@ -1,6 +1,6 @@
 package construction;
 
-public class LivsetockFarmDirector {
+public class AnimalhouseBuilder {
 
 	public Animalhouse buildAnimalhouse() {
 		Animalhouse ah =  new Animalhouse();
