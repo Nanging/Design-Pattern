@@ -2,8 +2,6 @@ package buy;
 import livestock.*;
 import java.util.Vector;
 
-import com.sun.javadoc.Type;
-
 public abstract class BuyLivestock extends Buy{
 	ResList reslist = ResList.Instance();
 	public Vector<Livestock> llist = new Vector<Livestock>();

@@ -1,9 +1,7 @@
 import java.util.Vector;
 
 import buy.*;
-import buy.ResList.s_type;
 import livestock.*;
-import worker.HarvestCommand;
 public class BuyDemo {
 
 	public static void main(String[] args) {

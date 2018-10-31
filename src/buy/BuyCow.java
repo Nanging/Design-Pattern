@@ -1,6 +1,5 @@
 package buy;
 import livestock.*;
-import java.util.Vector;
 
 import buy.ResList.l_type;
 
