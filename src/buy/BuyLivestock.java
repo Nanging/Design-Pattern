@@ -2,9 +2,12 @@ package buy;
 import livestock.*;
 import java.util.Vector;
 
+import com.sun.javadoc.Type;
+
 public abstract class BuyLivestock extends Buy{
 	ResList reslist = ResList.Instance();
 	public Vector<Livestock> llist = new Vector<Livestock>();
+	public int type = -1; 
 	
 	public void addToList(int type, int num){//Add new livestock to the list
 		reslist.l_list.get(type).addAll(llist);
@@ -28,5 +31,15 @@ public abstract class BuyLivestock extends Buy{
 	}
 
 	public abstract Livestock create(int id);	//Call this function to generate new livestock
-	public abstract Vector<Livestock> start(int num);//Call this function to start buying
+
+	public Vector<Livestock> start(int num){//
+		int id1 = reslist.l_list.get(type).size();
+		for(int i = 0; i < num; i++){
+			llist.addElement(create(id1));
+			id1++;
+		}
+		addToList(type, num);
+		System.out.print("You have bought "+num+" Livestock(s) successfully. You still have гд"+reslist.money+" left.\n");
+		return llist;
+	}
 }

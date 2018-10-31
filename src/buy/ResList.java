@@ -30,7 +30,7 @@ public class ResList {
 	};//Seed seedling type or feed
 	public Vector<Vector<Livestock>> l_list = new Vector<Vector<Livestock>>(10);//Store different livestock individuals
 	public int[] s_list = new int[10];//Store different seedlings or feed quantities
-	public float money=1000;
+	public float money=10000;
 	
 	private final static ResList r = new ResList();//Singleton pattern
 	private ResList(){
