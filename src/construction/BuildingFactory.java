@@ -4,11 +4,12 @@ public class BuildingFactory {
 	
 	public static BuildingAction produce(String BulidingType) {
 		if("factory".equals(BulidingType)) {
-			return new Factory();
+			return new FactoryBuilder().buildFactory();
 		}else if("warehouse".equals(BulidingType)) {
-			return new Warehouse();
+			return new WarehouseBuilder().buildWarehouse();
 		}else if("animalhouse".equals(BulidingType)) {
-			return new Animalhouse();
+			
+			return new AnimalhouseBuilder().buildAnimalhouse();
 		}else {
 			System.out.println("Input the correct type!");
 			return null;
