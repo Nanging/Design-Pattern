@@ -15,7 +15,7 @@ public class User {
 			System.out.println("2. ����");
 			System.out.println("3.ѡ������ ");
 			System.out.println("4.Sell and Deal ");
-			System.out.println("1. ");
+			System.out.println("5.go to livestock farm ");
 			System.out.println("1. ");
 			System.out.println("6. Exit");
 			Scanner in = new Scanner(System.in);
@@ -42,7 +42,7 @@ public class User {
 				break;
 
 			case 5:
-				
+				new LivestockUse(in).menu();
 				break;
 			case 6:
 				loop = false;

@@ -1,6 +1,6 @@
 package thing;
 
-import livestock.Livestock;
+import livestock.*;
 import buy.ResList;
 import buy.ResList.s_type;
 public class LivestockState {
@@ -29,7 +29,7 @@ public class LivestockState {
 	public int getState() {
 		return this.sta;
 	}
-	//��ˮ
+	//��ˮ
 	public void setState(int i) {
 		this.sta=i;
 	}
@@ -42,7 +42,6 @@ public class LivestockState {
 	}
 	//ιʳ
 	public void Feed() {
-		ResList.Instance().s_list[s_type.feed.id()]--;
 		this.FeedTime++;
 		if(this.getState()==0&&this.DrinkTime>=3&&this.FeedTime>=3)
 		{
