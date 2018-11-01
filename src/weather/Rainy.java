@@ -4,11 +4,11 @@ public class Rainy extends Wstate{
 	private int _id;
 	private static int _count=1;
 	private static Rainy _freestate;
-	public Rainy() {addPrototype(this);Wstate.array.add(this);};
+	public Rainy() {addPrototype(this);Wstate.array.add(this);num++;_id=num;};
 
 	protected Rainy(int i) {
 		// TODO Auto-generated constructor stub
-		_id=_count++;
+		num++;_id=num;
 	}
 
 	@Override
@@ -30,7 +30,7 @@ public class Rainy extends Wstate{
 	@Override
 	public void work() {
 		// TODO Auto-generated method stub
-		System.out.println("Weather::rainy"+_id);
+		System.out.println("It's rainy now!");
 	}
 
 	@Override
@@ -42,7 +42,7 @@ public class Rainy extends Wstate{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		String name="Weather::rainy"+_id;
+		String name="rainy";
 		return name;
 	}
 
@@ -50,6 +50,12 @@ public class Rainy extends Wstate{
 	public int getNumber() {
 		// TODO Auto-generated method stub
 		return _count;
+	}
+
+	@Override
+	public int returnid() {
+		// TODO Auto-generated method stub
+		return _id;
 	}
 
 }

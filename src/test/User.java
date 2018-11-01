@@ -13,7 +13,7 @@ public class User {
 		do {
 			System.out.println("1. 去农场");//这里进入对应的操作菜单
 			System.out.println("2. 买东西");
-			System.out.println("1. ");
+			System.out.println("3.选择天气 ");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
@@ -34,7 +34,7 @@ public class User {
 				break;
 
 			case 3:
-				
+				new WeatherUse(in).menu();
 				break;
 
 			case 4:
