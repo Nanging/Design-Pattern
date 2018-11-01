@@ -12,12 +12,12 @@ public class User {
 		ResList.Instance();
 		do {
 			System.out.println("1. ȥũ��");//��������Ӧ�Ĳ����˵�
+			System.out.println("2. ����");
+			System.out.println("3.ѡ������ ");
+			System.out.println("4.Sell and Deal ");
 			System.out.println("1. ");
 			System.out.println("1. ");
-			System.out.println("4.sell ");
-			System.out.println("1. ");
-			System.out.println("1. ");
-			System.out.println("1. Exit");
+			System.out.println("6. Exit");
 			Scanner in = new Scanner(System.in);
 			if (in.hasNextInt()==false) {
 				System.out.println("wrong input");
@@ -30,10 +30,11 @@ public class User {
 				new FarmUse(in).menu();
 				break;
 			case 2:
-
-
-			case 3:
+				new BuyUse(in).menu();				
+				break;
 				
+			case 3:
+				new WeatherUse(in).menu();
 				break;
 
 			case 4:
