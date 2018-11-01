@@ -5,12 +5,16 @@ import thing.FieldContainer;
 public class FarmMaster {
 	private FarmMaster() {}
 	private static FarmMaster instance = new FarmMaster();
+	private Manager manager = new Manager();
 	public static FarmMaster getInstance() {
 		return instance;
 	}
+	public void setManager(Manager manager) {
+		this.manager = manager;
+	}
 	//命令工人去做
 	public void call(Command command) {
-		Manager.getInstance().call(command);
+		manager.call(command);
 	}
 	//施肥
 	public void fertilize(int landID) {
@@ -23,9 +27,5 @@ public class FarmMaster {
 	//收获
 	public void harvest(int landID) {
 		FieldContainer.getInstance().harvest(landID);
-	}
-	
-	public void callManager(Command command) {
-		Manager.getInstance().call(command);
 	}
 }
