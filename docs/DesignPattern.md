@@ -1,6 +1,31 @@
 # API 说明文档
 
+# 1 题材综述
 
+# 1.1 介绍
+
+基于欢乐农场的选题，开发了包括牲畜养殖，田地种植，人员任务分配，资源管理等功能的framework。
+
+# 1.2 成员
+
+组长：
+赵伟
+组员：
+黄耀贤
+徐伟喆
+俞杨
+李庆国
+张宇
+侯禹志
+成佳杰
+覃敏溢
+冯玉山
+
+# 2 Design Pattern 汇总表
+
+见 "汇总表.docx"
+
+# 3 实现
 
 ## 3.1 State
 
@@ -57,7 +82,7 @@ BuyLivestock作为一个购买牲畜的抽象父类，提供了create()抽象方
 #### 3.3.3.2 class diagram
 
 ![buy_stragegy2](image/buy_stragegy2.png)
- 
+
  ## 3.4 Mediator
 
 ### 3.4.1 一套实现
@@ -91,7 +116,7 @@ WorkFactory类既提供接口产生Worker类实例也提供接口生成WorkAdapt
 #### 3.5.1.2 class diagram
 
  ![AbstractFactory](image/AbstractFactory.png)
- 
+
  ## 3.6 Builder
 
 ### 3.6.1 一套实现
@@ -105,7 +130,7 @@ Builder类提供接口产生指定BuildingAction的子类实例，通过调用�
  ![Builder](image/Builder.png)
 
 ### 3.6.2 一套实现
- 
+
 #### 3.6.2.1 API描述
 
 LivestockFarm创建并管理各个存储Livestock的ArrayList。Animalhouse通过implement接口BuildingAction来继承接口，Animalhouse实现生成LivestockFarm。LivsetockFarmDirector执行Animalhouse生成LivestockFarm的动作。
@@ -113,7 +138,7 @@ LivestockFarm创建并管理各个存储Livestock的ArrayList。Animalhouse通�
 #### 3.6.2.2 class diagram
 
 ![Builder](image\livestock_Builder.png)
-  
+
  ## 3.7 Bridge 
 
 ### 3.7.1 一套实现
@@ -125,7 +150,7 @@ BorderStyle类提供接口供Title类实例进行调用，进而改变样式。S
 #### 3.7.1.2 class diagram
 
  ![Bridge](image/Bridge.png)
-   
+
  ## 3.8 Composite  
 
 ### 3.8.1 一套实现
@@ -173,7 +198,7 @@ CommandDispatcher类通过call函数下达指令，Worker类作为Receiver提供
 #### 3.11.1.2 class diagram
 
  ![Command](image/Command.png)
- 
+
 ## 3.12 Iterator     
 
 ### 3.12.1 一套实现
@@ -185,7 +210,7 @@ LivestockFarm类作为集合体，保有一系列Livestock的实例，Iterator�
 #### 3.12.1.2 class diagram
 
  ![Iterator](image/Iterator.png)
-  
+
 ## 3.13 Observer      
 
 ### 3.13.1 一套实现
@@ -197,7 +222,7 @@ Factory类作为被观察者，保有一个Seller类的实例，而Seller类作�
 #### 3.13.1.2 class diagram
 
  ![Observer](image/Observer.png)
-   
+
 ## 3.14 Façade      
 
 ### 3.14.1 一套实现
@@ -322,3 +347,14 @@ ResMemento用于保存ResList一个时刻的状态，用于备份和还原。cre
  #### 3.21.1.2 class diatram
 
  ![Chain_of_Responsibility](image/sale_rolechain.png)
+ ## 3.22 Adapter      
+
+### 3.22.1 一套实现
+
+#### 3.22.1.1 API描述
+
+通过WorkerAdapter类适配MachineSchedule类，使之可以实现Worker类职能
+
+#### 3.22.1.2 class diagram
+
+ ![Adapter](image/Adapter.png)
