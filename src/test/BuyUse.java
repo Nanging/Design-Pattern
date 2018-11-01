@@ -23,7 +23,7 @@ public class BuyUse {
 				+ resList.s_list[1] + " carrot seed, " + 
 				+ resList.s_list[2] + " apple seed, " + 
 				+ resList.s_list[3] + " pear seed, \nand " + 
-				+ resList.s_list[3] + " feed " + "now.");
+				+ resList.s_list[4] + " feed " + "now.");
 		System.out.println("-----------------------------------------------");
 		System.out.println("You can buy livestocks, seeds or feed here.");
 		System.out.println("Enter the follwing number to choose what you want ot buy:");
@@ -64,7 +64,7 @@ public class BuyUse {
 			
 			buyLivestock = new BuySheep();
 			buyLivestock.start(amount);
-			System.out.println("Now you have " + resList.l_list.get(0).size() + " sheep now.");			
+			System.out.println("Now you have " + resList.l_list.get(1).size() + " sheep now.");			
 			break;
 		case 3:
 			System.out.print("Please enter the amount you want to buy:");
@@ -73,7 +73,7 @@ public class BuyUse {
 			
 			buyLivestock = new BuyChook();
 			buyLivestock.start(amount);
-			System.out.println("Now you have " + resList.l_list.get(0).size() + " chook(s) now.");			
+			System.out.println("Now you have " + resList.l_list.get(2).size() + " chook(s) now.");			
 			break;
 		case 4:
 			System.out.print("Please enter the amount you want to buy:");
@@ -82,7 +82,7 @@ public class BuyUse {
 			
 			buyLivestock = new BuyCow();
 			buyLivestock.start(amount);
-			System.out.println("Now you have " + resList.l_list.get(0).size() + " cow(s) now.");		
+			System.out.println("Now you have " + resList.l_list.get(3).size() + " cow(s) now.");		
 			break;
 		case 5:
 			System.out.print("Please enter the amount you want to buy:");
@@ -91,7 +91,7 @@ public class BuyUse {
 			
 			buyLivestock = new BuyPig();
 			buyLivestock.start(amount);
-			System.out.println("Now you have " + resList.l_list.get(0).size() + " pig(s) now.");		
+			System.out.println("Now you have " + resList.l_list.get(4).size() + " pig(s) now.");		
 			break;
 		case 6:
 
