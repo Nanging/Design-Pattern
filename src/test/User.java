@@ -1,16 +1,17 @@
 package test;
 
 import java.util.Scanner;
-
+import buy.*;
 public class User {
 	public void init() {//初始化都在这
 		System.out.println("welcome to ???");
+		
 	}
 	public void Menu() {//分功能执行
 		boolean loop = true;
-		
+		ResList.Instance();
 		do {
-			System.out.println("1. 去农场");
+			System.out.println("1. 去农场");//这里进入对应的操作菜单
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");

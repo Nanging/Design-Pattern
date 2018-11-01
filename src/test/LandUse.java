@@ -4,6 +4,7 @@ import java.util.Scanner;
 
 import thing.FieldContainer;
 
+import buy.*;
 public class LandUse {
 	private Scanner in;
 	public LandUse(Scanner in) {
@@ -19,7 +20,7 @@ public class LandUse {
 			System.out.println("2. 浇水");
 			System.out.println("3. 施肥");
 			System.out.println("4. 收获");
-			System.out.println("5. 收获");
+			System.out.println("5. 移除");
 			System.out.println("6. 离开");
 			if (in.hasNextInt()==false) {
 				System.out.println("错误输入");
@@ -72,6 +73,14 @@ public class LandUse {
 		 * 
 		 * 
 		 */
+		if(plantType>3||plantType<0) {
+			System.out.println("没有该作物");
+			return;
+		}
+		if(ResList.Instance().s_list[plantType]<=0) {
+			System.out.println("种子不够");
+			return;
+		}
 		FieldContainer.getInstance().sow(plantType, landID);
 	}
 	public void remove() {
