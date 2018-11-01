@@ -1,5 +1,6 @@
 package test;
 import buy.BuyOx;
+import buy.BuySeedOrFeed;
 import buy.ResList;
 
 import java.util.Scanner;
@@ -62,6 +63,43 @@ public class BuyUse {
 			break;
 		case 6:
 
+			System.out.print("Please enter the amount of cabbage seed you want to buy:");
+			if(in.hasNextInt())
+				amount = in.nextInt();
+			new BuySeedOrFeed().addToList(0, amount);
+			System.out.println("Now you have " + resList.s_list[0] + " unit(s) of cabbage seed now.");
+			break;
+		case 7:
+
+			System.out.print("Please enter the amount of carrot seed you want to buy:");
+			if(in.hasNextInt())
+				amount = in.nextInt();
+			new BuySeedOrFeed().addToList(1, amount);
+			System.out.println("Now you have " + resList.s_list[1] + " unit(s) of carrot seed now.");
+			break;
+		case 8:
+
+			System.out.print("Please enter the amount of apple seed you want to buy:");
+			if(in.hasNextInt())
+				amount = in.nextInt();
+			new BuySeedOrFeed().addToList(2, amount);
+			System.out.println("Now you have " + resList.s_list[2] + " unit(s) of apple seed now.");
+			break;
+		case 9:
+
+			System.out.print("Please enter the amount of pear seed you want to buy:");
+			if(in.hasNextInt())
+				amount = in.nextInt();
+			new BuySeedOrFeed().addToList(3, amount);
+			System.out.println("Now you have " + resList.s_list[3] + " unit(s) of pear seed now.");
+			break;
+		case 10:
+
+			System.out.print("Please enter the amount of feed you want to buy:");
+			if(in.hasNextInt())
+				amount = in.nextInt();
+			new BuySeedOrFeed().addToList(4, amount);
+			System.out.println("Now you have " + resList.s_list[4] + " unit(s) of feed seed now.");
 			break;
 		case 11:
 			break;
