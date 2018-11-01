@@ -3,12 +3,12 @@ package weather;
 public class Windy extends Wstate{
 	private static int _count=1;
 	private int _id;
-	public Windy() {addPrototype(this);Wstate.array.add(this);};
+	public Windy() {addPrototype(this);Wstate.array.add(this);num++;_id=num;};
 	private static Windy _grazestate;
 
 	protected Windy(int i) {
 		// TODO Auto-generated constructor stub
-		_id=_count++;
+		num++;_id=num;
 	}
 
 	@Override
@@ -29,7 +29,7 @@ public class Windy extends Wstate{
 	@Override
 	public void work() {
 		// TODO Auto-generated method stub
-		System.out.println("Weather::windy"+_id);
+		System.out.println("It's windy now!");
 	}
 
 	@Override
@@ -41,7 +41,7 @@ public class Windy extends Wstate{
 	@Override
 	public String getName() {
 		// TODO Auto-generated method stub
-		String name="Weather::windy"+_id;
+		String name="windy";
 		return name;
 	}
 
@@ -49,6 +49,12 @@ public class Windy extends Wstate{
 	public int getNumber() {
 		// TODO Auto-generated method stub
 		return _count;
+	}
+
+	@Override
+	public int returnid() {
+		// TODO Auto-generated method stub
+		return _id;
 	}
 
 }

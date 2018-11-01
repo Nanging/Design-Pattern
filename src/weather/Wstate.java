@@ -7,6 +7,8 @@ public abstract class Wstate implements Acceptor
   private static Wstate[]_states=new Wstate[10];//存放各个state类型
   private static int _nextslot=0;
   public static Vector<Wstate>array=new Vector<Wstate>();
+  public static int num=0;
+  public abstract int returnid();
   protected abstract Weather returnType();
   protected static void addPrototype(Wstate state)
   {
