@@ -12,7 +12,7 @@ public class User {
 		ResList.Instance();
 		do {
 			System.out.println("1. 去农场");//这里进入对应的操作菜单
-			System.out.println("1. ");
+			System.out.println("2. 买东西");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
@@ -30,7 +30,7 @@ public class User {
 				new FarmUse(in).menu();
 				break;
 			case 2:
-				
+				new BuyUse(in).menu();				
 				break;
 
 			case 3:
