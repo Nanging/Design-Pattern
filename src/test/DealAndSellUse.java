@@ -25,7 +25,7 @@ public class DealAndSellUse {
 		Warehouse ware=farm.getWarehouse();
 		Factory factory=farm.getFactory();
 		do {
-			System.out.println("1.Get the list");
+			System.out.println("\n1.Get the list");
 			System.out.println("2.Sell the products");
 			System.out.println("3.Sell the goods");
 			System.out.println("4.Exit");
