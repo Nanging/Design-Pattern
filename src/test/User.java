@@ -17,7 +17,7 @@ public class User {
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
-			System.out.println("1. Exit");
+			System.out.println("6. Exit");
 			Scanner in = new Scanner(System.in);
 			if (in.hasNextInt()==false) {
 				System.out.println("wrong input");

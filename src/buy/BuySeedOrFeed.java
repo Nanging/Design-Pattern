@@ -9,7 +9,7 @@ public class BuySeedOrFeed extends Buy {
 		String typeName = "";
 		switch (type) {
 		case 0:
-			typeName = "CabbageSeed";
+			typeName = "cabbage seed";
 			reslist.money -= num;
 			break;
 		case 1:
