@@ -11,4 +11,9 @@ public class Carrot extends DisposablePlant {
 		Carrier newCarrier=new Carrier(new Product(ProductType.CARROT,1));
 		newCarrier.carryToWareHouse();
 	}
+	@Override
+	public void showType() {
+		// TODO Auto-generated method stub
+		System.out.print("ÂÜ²·");
+	}
 }

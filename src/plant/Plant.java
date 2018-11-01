@@ -27,5 +27,5 @@ public abstract class Plant {
 	public void changeState(PlantState state) {
 		growState = state;
 	}
-
+	public abstract void showType();
 }

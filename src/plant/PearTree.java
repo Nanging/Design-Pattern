@@ -11,4 +11,9 @@ public class PearTree extends RepeatablePlant {
 		Carrier newCarrier=new Carrier(new Product(ProductType.PEAR,1));
 		newCarrier.carryToWareHouse();
 	}
+	@Override
+	public void showType() {
+		// TODO Auto-generated method stub
+		System.out.print("Àæ");
+	}
 }

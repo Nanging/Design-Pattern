@@ -30,5 +30,12 @@ public class Land {
 			remove();
 		}
 	}
+	public void showState() {
+		System.out.print("ÖÖÖ²×÷Îï£º");
+		plant.showType();
+		System.out.print("     ×´Ì¬£º");
+		plant.showPlantState();
+		System.out.print("\n");
+	}
 
 }

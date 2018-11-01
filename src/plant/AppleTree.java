@@ -11,4 +11,10 @@ public class AppleTree extends RepeatablePlant {
 		Carrier newCarrier=new Carrier(new Product(ProductType.APPLE,1));
 		newCarrier.carryToWareHouse();
 	}
+
+	@Override
+	public void showType() {
+		// TODO Auto-generated method stub
+		System.out.print("Æ»¹û");
+	}
 }

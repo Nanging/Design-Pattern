@@ -10,6 +10,10 @@ public class Cabbage extends DisposablePlant{
 		Carrier newCarrier=new Carrier(new Product(ProductType.CABBAGE,1));
 		newCarrier.carryToWareHouse();
 	}
-
+	@Override
+	public void showType() {
+		// TODO Auto-generated method stub
+		System.out.print("°ü²Ë");
+	}
 	
 }

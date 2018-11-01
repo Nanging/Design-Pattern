@@ -8,15 +8,16 @@ public class User {
 	}
 	public void Menu() {//分功能执行
 		boolean loop = true;
-		Scanner in = new Scanner(System.in);
+		
 		do {
-			System.out.println("1. Farm");
+			System.out.println("1. 去农场");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. Exit");
+			Scanner in = new Scanner(System.in);
 			if (in.hasNextInt()==false) {
 				System.out.println("wrong input");
 				in.next();
@@ -25,7 +26,7 @@ public class User {
 			int choice = in.nextInt();
 			switch (choice) {
 			case 1:
-				
+				new FarmUse(in).menu();
 				break;
 			case 2:
 				
@@ -50,7 +51,7 @@ public class User {
 			}	
 				
 		} while (loop);
-		in.close();
+
 		System.out.println("-------------EXIT-------------");
 	}
 
