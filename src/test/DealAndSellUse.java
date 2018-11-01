@@ -18,7 +18,7 @@ public class DealAndSellUse {
 	}
 	
 	public void menu() {
-		System.out.println("/nThe order list");
+		System.out.println("\nThe order list");
 		boolean loop = true;
 		Farm farm = Farm.getInstance();
 		
