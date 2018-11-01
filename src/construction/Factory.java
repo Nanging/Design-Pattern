@@ -54,5 +54,8 @@ public class Factory implements BuildingAction {
 		clonedGoods.setPrice(product.getPrice()*2);
 		seller.sell(clonedGoods);
 	}
+	public void dealAndSell() {
+		System.out.println("can't sell it");
+	}
 	
 }

@@ -3,18 +3,18 @@ package test;
 import java.util.Scanner;
 import buy.*;
 public class User {
-	public void init() {//³õÊ¼»¯¶¼ÔÚÕâ
+	public void init() {//ï¿½ï¿½Ê¼ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½
 		System.out.println("welcome to ???");
 		
 	}
-	public void Menu() {//·Ö¹¦ÄÜÖ´ÐÐ
+	public void Menu() {//ï¿½Ö¹ï¿½ï¿½ï¿½Ö´ï¿½ï¿½
 		boolean loop = true;
 		ResList.Instance();
 		do {
-			System.out.println("1. È¥Å©³¡");//ÕâÀï½øÈë¶ÔÓ¦µÄ²Ù×÷²Ëµ¥
+			System.out.println("1. È¥Å©ï¿½ï¿½");//ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½ï¿½Ó¦ï¿½Ä²ï¿½ï¿½ï¿½ï¿½Ëµï¿½
 			System.out.println("1. ");
 			System.out.println("1. ");
-			System.out.println("1. ");
+			System.out.println("4.sell ");
 			System.out.println("1. ");
 			System.out.println("1. ");
 			System.out.println("1. Exit");
@@ -30,16 +30,16 @@ public class User {
 				new FarmUse(in).menu();
 				break;
 			case 2:
-				
-				break;
+
 
 			case 3:
 				
 				break;
 
 			case 4:
-				
+				new DealAndSellUse(in).menu();
 				break;
+
 			case 5:
 				
 				break;

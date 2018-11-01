@@ -23,5 +23,9 @@ public class Sale {
 		Store storeChain = getChainOfStores();
 		storeChain.storeMessage(product);
 	}
+	
+	public static void sale() {
+		System.out.println("can't sell it");
+	}
 		 
 }

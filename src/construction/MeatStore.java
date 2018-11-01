@@ -9,6 +9,10 @@ public class MeatStore extends Store{
 	    this.level = level;
 	} 
 	
+	protected void sale() {
+		
+	}
+	
 	protected int sale(Product forsale) {    
 		System.out.println("MeatStore: $" + forsale.getPrice()*forsale.getNumber());
 		ResList resList = ResList.Instance();
