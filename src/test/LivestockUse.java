@@ -172,29 +172,29 @@ public class LivestockUse {
 				System.out.println("Get ahead");
 				break;
 			case 4:
-		    	System.out.println("\n Pig state（0：young；1：mature）：\n");
+		    	System.out.println("\n Pig state(0:young;1:mature):\n");
 		    	for(Pig A : pigList) {
-			    	System.out.println("pig：ID "+A.getId()+" state： "+A.nowstate.getState());
+			    	System.out.println("pig:ID "+A.getId()+" state: "+A.nowstate.getState());
 		    	}
-		    	System.out.println("\n Ox state（0：young；1：mature）：\n");
+		    	System.out.println("\n Ox state(0:young;1:mature):\n");
 		    	for(Ox A : oxList) {
-			    	System.out.println("Ox：ID "+A.getId()+" state： "+A.nowstate.getState());
+			    	System.out.println("Ox:ID "+A.getId()+" state: "+A.nowstate.getState());
 		    	}
-		    	System.out.println("\n cow state（0：young；1：mature）：\n");
+		    	System.out.println("\n cow state(0:young;1:mature):\n");
 		    	for(Cow A : cowList) {
-			    	System.out.println("cow：ID "+A.getId()+" state： "+A.nowstate.getState());
+			    	System.out.println("cow:ID "+A.getId()+" state: "+A.nowstate.getState());
 		    	}
-		    	System.out.println("\n chook（0：young；1：mature）：\n");
+		    	System.out.println("\n chook(0:young;1:mature):\n");
 		    	for(Chook A : chookList) {
-			    	System.out.println("chook：ID "+A.getId()+" state： "+A.nowstate.getState());
+			    	System.out.println("chook:ID "+A.getId()+" state: "+A.nowstate.getState());
 		    	}
-		    	System.out.println("\n sheep（0：young；1：mature）：\n");
+		    	System.out.println("\n sheep(0:young;1:mature):\n");
 		    	for(Sheep A : sheepList) {
-			    	System.out.println("sheep：ID "+A.getId()+" state： "+A.nowstate.getState());
+			    	System.out.println("sheep:ID "+A.getId()+" state: "+A.nowstate.getState());
 		    	}
 				break;
 			default:
-				System.out.println("��������");
+				System.out.println("wrong input");
 				break;
 			}	
 		} while (loop);
