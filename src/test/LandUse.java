@@ -15,15 +15,15 @@ public class LandUse {
 		boolean loop = true;
 //		Scanner in = new Scanner(System.in);
 		do {
-			System.out.println("请选择要执行的操作：");
-			System.out.println("1. 播种");
-			System.out.println("2. 浇水");
-			System.out.println("3. 施肥");
-			System.out.println("4. 收获");
-			System.out.println("5. 移除");
-			System.out.println("6. 离开");
+			System.out.println("choose operation");
+			System.out.println("1.sow");
+			System.out.println("2.irragation");
+			System.out.println("3.fertilization");
+			System.out.println("4.harvest");
+			System.out.println("5.remove");
+			System.out.println("6.exit");
 			if (in.hasNextInt()==false) {
-				System.out.println("错误输入");
+				System.out.println("wrong input");
 				continue;
 			}
 			int choice = in.nextInt();
@@ -47,7 +47,7 @@ public class LandUse {
 				loop = false;
 				break;
 			default:
-				System.out.println("错误输入");
+				System.out.println("wrong input");
 				break;
 			}	
 		} while (loop);
@@ -55,30 +55,23 @@ public class LandUse {
 	public void sow() {
 		int landID = getLandID();
 		int plantType = 0;
-		System.out.println("请输入你播种的植物（0.包菜，1.萝卜，2.苹果，3.梨）：");	
+		System.out.println("enter your plant: 0 for cabbage, 1 for carrot, 2 for apple tree, 3 for pear tree");	
 		boolean loop = true;
 		do {
 			if (in.hasNextInt()==false) {
-				System.out.println("错误输入，请重新输入");
+				System.out.println("wrong input");
 				in.next();
 				continue;
 			}	
 			plantType = in.nextInt();
 			loop = false;
 		} while (loop);
-		/* 种子数量减少代码
-		 * 
-		 * 
-		 * 
-		 * 
-		 * 
-		 */
 		if(plantType>3||plantType<0) {
-			System.out.println("没有该作物");
+			System.out.println("wrong input");
 			return;
 		}
 		if(ResList.Instance().s_list[plantType]<=0) {
-			System.out.println("种子不够");
+			System.out.println("seed not enough");
 			return;
 		}
 		FieldContainer.getInstance().sow(plantType, landID);
@@ -102,11 +95,11 @@ public class LandUse {
 	
 	public int getLandID() {
 		int landID = 0;
-		System.out.println("请输入你要操作的土地号：");	
+		System.out.println("enter the landID you want to operate");	
 		boolean loop = true;
 		do {
 			if (in.hasNextInt()==false) {
-				System.out.println("错误输入，请重新输入");
+				System.out.println("wrong input");
 				in.next();
 				continue;
 			}	

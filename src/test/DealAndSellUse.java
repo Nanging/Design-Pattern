@@ -30,7 +30,7 @@ public class DealAndSellUse {
 			System.out.println("3.Sell the goods");
 			System.out.println("4.Exit");
 			if (in.hasNextInt()==false) {
-				System.out.println("��������");
+				System.out.println("wrong input");
 				in.next();
 //				in.close();
 				continue;
@@ -60,7 +60,7 @@ public class DealAndSellUse {
 				loop = false;
 				break;
 			default:
-				System.out.println("��������");
+				System.out.println("wrong input");
 				break;
 			}	
 		}while(loop);

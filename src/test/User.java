@@ -3,20 +3,19 @@ package test;
 import java.util.Scanner;
 import buy.*;
 public class User {
-	public void init() {//��ʼ��������
-		System.out.println("welcome to ???");
+	public void init() {
+		System.out.println("welcome to JiaDing Farm");
 		
 	}
-	public void Menu() {//�ֹ���ִ��
+	public void Menu() {
 		boolean loop = true;
 		ResList.Instance();
 		do {
-			System.out.println("1. ȥũ��");//��������Ӧ�Ĳ����˵�
-			System.out.println("2. ����");
-			System.out.println("3.ѡ������ ");
+			System.out.println("1.Go to Farm Land");
+			System.out.println("2.Buy");
+			System.out.println("3.Weather ");
 			System.out.println("4.Sell and Deal ");
 			System.out.println("5.go to livestock farm ");
-			System.out.println("1. ");
 			System.out.println("6. Exit");
 			Scanner in = new Scanner(System.in);
 			if (in.hasNextInt()==false) {

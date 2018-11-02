@@ -17,17 +17,17 @@ public class FarmUse {
 		this.in = in;
 	}
 	public void menu() {
-		System.out.println("你现在已经来到了农场\n\n");
+		System.out.println("now you are at farmland\n\n");
 		boolean loop = true;
 		do {
-			System.out.println("现在你可以执行以下操作：");
-			System.out.println("1. 创建新的土地");
-			System.out.println("2. 对土地进行操作（播种、浇水、施肥、收获、移除作物）");
-			System.out.println("3. 查看所有土地状态");
-			System.out.println("4. 离开");
+			System.out.println("Operations:");
+			System.out.println("1.make new land");
+			System.out.println("2.irragation/fertilization/harvest/remove operations");
+			System.out.println("3.show lands state");
+			System.out.println("4.exit");
 //			Scanner in = new Scanner(System.in);
 			if (in.hasNextInt()==false) {
-				System.out.println("错误输入");
+				System.out.println("wrong input");
 				System.out.println("---------"+in.next()+"++++++++++++++");
 //				in.close();
 				continue;
@@ -48,7 +48,7 @@ public class FarmUse {
 				loop = false;
 				break;
 			default:
-				System.out.println("错误输入");
+				System.out.println("wrong input");
 				break;
 			}	
 		} while (loop);
@@ -59,14 +59,14 @@ public class FarmUse {
 		FieldContainer fieldContainer = FieldContainer.getInstance();
 		ArrayList<Land> lands =  fieldContainer.getLands();
 		ArrayList<Land> unlands =  fieldContainer.getEmptyLands();
-		System.out.println("你当前拥有"+(lands.size()+unlands.size())+"块土地：\n");
+		System.out.println("you have"+(lands.size()+unlands.size())+"lands: \n");
 		for (Land land : lands) {
-			System.out.println("土地 "+land.getLandID()+" : ");
+			System.out.println("land"+land.getLandID()+":");
 			land.showState();
 		}
 		for (Land land : unlands) {
-			System.out.println("土地 "+land.getLandID()+" : ");
-			System.out.println("未种植作物");
+			System.out.println("land "+land.getLandID()+":");
+			System.out.println("uncultivated");
 		}
 	}
 	
